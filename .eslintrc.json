@@ -18,6 +18,14 @@
     "sourceType": "module"
   },
   "plugins": ["react", "prettier"],
+  "ignorePatterns": [
+    "node_modules/",
+    "config/",
+    "scripts/",
+    "build/",
+    "coverage/",
+    "serviceWorker.js"
+  ],
   "rules": {
     "no-unused-vars": "error",
     "no-console": "error",
