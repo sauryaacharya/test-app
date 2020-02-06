@@ -74,18 +74,25 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 # Coding Standard and Guidelines
 
+This coding standards and guidelines are aimed for clean, readable and consistent coding among the developers.
+
 ## React Guide
 
-### General
+React application uses `eslint` for linting and `prettier` for formatting. The linting and formatting rules are defined in `.eslintrc.json` and `.prettierrc`. For VSCode integration, add `eslint` and `prettier` extension.
 
-#### Naming Convention
+### Naming Convention
 
-- Always use PascalCase for file name as well as component name. e.g. `LoginPanel.js`
+- Always use PascalCase for component's file name as well as component name. e.g. `LoginPanel.js`
 
   ```jsx
   class LoginPanel extends React.Component {}
 
   export default LoginPanel;
+  ```
+  
+- Always use camelCase for redux related file name.
+  ```
+  applicationAction.js, applicationReducer.js
   ```
 
 - Always use camelCase for prop names
@@ -98,6 +105,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
   ```
 
 - Always use camelCase for variable names
+  
   ```jsx
   const myVar = 'hello';
   ```
@@ -109,6 +117,69 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
   };
   ```
   
-  #### Alignments
+- Event handler method should follow the below convention
   
-  - 
+  ```
+  // The first part indicates the event and the last bit is the context. In this case, the context is Login
+  const onClickLogin = () => {
+  }
+  
+  <Button onClick={ this.onClickLogin } label="Login" />
+  ```
+  
+### Alignments
+  
+- Props and attributes should be in each line if very long (Use formatter to auto correct)
+  
+  ```jsx
+  <Foo
+    superLongParam="bar"
+    anotherSuperLongParam="baz"
+  />
+  ```
+    
+- if props or attributes fit in one line then keep it on the same line
+    
+  ```jsx
+  <Foo bar="bar" />
+  ```
+    
+### Quotes
+  
+- Always use double quotes ("") for JSX attributes, but single quote for all other JS
+  
+  ```jsx
+  <Foo bar="bar" />
+  ```
+  
+  ```jsx
+  <Foo style={{ left: '20px' }} />
+  ```
+  
+### Spacing
+
+- Always have spacing on curly braces if an object literal is a single line
+  ```jsx
+  { a: 1, b: 2 }
+  ```
+
+### Misc
+
+- Always have a trailing commas for multiline
+```jsx
+{
+  a: 1,
+  b: 2,
+}
+
+[
+  'a',
+  'b',
+]
+```
+
+## OOP Guide
+
+OOP language such as Groovy, Kotlin and Java uses IntelliJ default formatter. Developers are expected to always format the code using default formatter. Apart from this, there are some convention to follow.
+
+### Instance variable ordering
