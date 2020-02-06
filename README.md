@@ -177,9 +177,3 @@ React application uses `eslint` for linting and `prettier` for formatting. The l
   'b',
 ]
 ```
-
-## OOP Guide
-
-OOP language such as Groovy, Kotlin and Java uses IntelliJ default formatter. Developers are expected to always format the code using default formatter. Apart from this, there are some convention to follow.
-
-### Instance variable ordering
