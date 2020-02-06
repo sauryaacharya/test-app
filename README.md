@@ -66,3 +66,49 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+### `yarn build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+# Coding Standard and Guidelines
+
+## React Guide
+
+### General
+
+#### Naming Convention
+
+- Always use PascalCase for file name as well as component name. e.g. `LoginPanel.js`
+
+  ```jsx
+  class LoginPanel extends React.Component {}
+
+  export default LoginPanel;
+  ```
+
+- Always use camelCase for prop names
+
+  ```jsx
+  <UserDetails
+    userName="dave"
+    firstName="David"
+  />
+  ```
+
+- Always use camelCase for variable names
+  ```jsx
+  const myVar = 'hello';
+  ```
+
+- Always use camelCase for method names
+
+  ```jsx
+  const updateSomething = something => {
+  };
+  ```
+  
+  #### Alignments
+  
+  - 
